@@ -11,15 +11,13 @@
     display: flex;
     justify-content: center;
     height: auto;
-    padding: 15px 200px 10px 200px;
     font-size: 15px
 }
 
+
 .start-btn {
-    text-align: center;
-    
-}
-.start-btn button {
+    display: flex;
+    margin: 10px auto;
     background-color: rgb(77, 31, 119);
     color: white;
     border: 1px;
@@ -27,3 +25,16 @@
     font-size: 12px;
     padding: 5px 10px 5px 10px;
 }
+
+.start-btn:hover {
+   background-color: blueviolet; 
+}
+
+.nav-container {
+    position: relative;
+    width: 100%;
+    margin-top: 10px;
+    font-size: 15px;
+    height: 40px;
+}
+

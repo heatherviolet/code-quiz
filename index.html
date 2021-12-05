@@ -11,25 +11,29 @@
 
 
 <body>
-    <header>
-        <div class="scores">
-            <a id="highscores-link">View high scores</a>
-        </div>
-        <div id="timer class="timer"> Time: 75 </div>
-    </header>
+   <nav>
+
+<main>
+    <div id="start-quiz">
+    <h1>Code Quiz Challenge</h1>
+    <p>Try to answer all the code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+    <div id="start-btn">  
+        <button id="submit" name="formBtn">Start Quiz</button>
+    <button id="startHighscore" onclick="showHighscore()">View high scores</button>
+</div> 
+
+    <div id="questions">
+        <button id="1" onclick="checkAnswer('1')">1</button>
+        <button id="2" onclick="checkAnswer('2')">2</button>
+        <button id="3" onclick="checkAnswer('3')">3</button>
+        <button id="4" onclick="checkAnswer('4')">4</button>
     
-    <div class="title">Code Quiz Challenge</div>
-    <div class="info">Try to answer all the code-related questions within the time limit.</div>
-    <div class="info">Keep in mind that incorrect answers will penalize your score/time by ten seconds!</div>
-    <button class="start-btn">Start Quiz</button>
-
-    
+    </div>
+    </div>
+</div>
+</main>
 
 
-
-  <script src="./assets/script.js"></script>
+  <script src="./script.js"></script>
 </body>
-
-
-  
-  </html>
+</html>

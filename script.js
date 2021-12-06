@@ -1,15 +1,32 @@
-let btn = document.createElement("button");
-btn.innerHTML = "Start Quiz";
-btn.type = "submit";
-btn.id = "formBtn";
-btn.onclick = function () {
-    alert("Button is clicked");
-};
-document.body.appendChild(btn);
+
+var answerEl = document.getElementById("answer");
+var hsEl = document.getElementById("high score");
+var endDiv = document.getElementById("end");
+var questionsEl = document.getElementById("questions-element");
+var elementStartEl = document.getElementById("starter-element");
+var startQuizButton = document.getElementById("submit");
+var startQuizDiv = document.getElementById("formBtn");
+var elementInitials = document.getElementById("initials-element")
+var elementHighScoresEl = document.getElementById("high-score-element")
+var endBtns = document.getElementById("end");
+
+//btn
+var buttonStartEl = document.querySelector("#start-quiz");
+var buttonGoBackEl = document.querySelector("#go-back");
+var buttonClearEl = document.querySelector("#clear-high-scores")
+//q btn
+var button1 = document.getElementById("1");
+var button2 = document.getElementById("2");
+var button3 = document.getElementById("3");
+var button4 = document.getElementById("4");
+
+var answerbuttonEl = document.getElementById("answer")
 
 // questions and answers array
 
-var questionsArray = [
+var HighScores = [];
+
+var questions = [
         {
             question: "Commonly used data types do NOT include:",
             1: "strings",
@@ -51,6 +68,28 @@ var questionsArray = [
             answer : "console log"
         }
     ]
-    
+  
+// start quiz function    
+var startQuiz = function() {
+    elementStartEl.classList.add('hide');
+    elementStartEl.classList.remove('show');
+    questionsEl.classList.remove('hide');
+    questionsEl.classList.add('show');
+}    
 
-    
+// display q and a info
+var displayQuestion = function(index) {
+    questionsEl.innerText = index.q
+    for (var i = 0; i <index.choices.length; i++) {
+        var answerbutton = document.createElement('button')
+            answerbutton.innerText = index.choices[i].choice
+            answerbutton.classList.add('btn')
+            answerbutton.classList.add('answerbtn')
+            answerbutton.addEventListener("click", answerCheck)
+            answerbuttonsEl.appendChild(answerbutton)
+            }
+        };
+
+
+// event listener
+buttonStartEl.addEventListener("click", startQuiz)
